@@ -1,0 +1,13 @@
+
+# https://github.com/cert-manager/cert-manager/tree/master/deploy/charts/cert-manager
+helmCharts:
+  - name: cert-manager
+    repo: https://charts.jetstack.io
+    version: v1.18.2
+    releaseName: certmanager-release
+    namespace: cert-manager
+    valuesInline:
+      crds:
+        enabled: true
+resources:
+  - Namespace.yaml
